@@ -11,7 +11,8 @@ const data = {
       overview:
         "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
       popularity: 1022.7906,
-      poster_path: "/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
       release_date: "2025-04-04",
       title: "A Minecraft Movie",
       video: false,
@@ -28,7 +29,8 @@ const data = {
       overview:
         "Dev Ambre, a ruthless cop, loses his memory in an accident just after he has finished solving a murder case and now has to reinvestigate it while keeping his memory loss a secret from everyone except DCP Farhan Khan.",
       popularity: 485.463,
-      poster_path: "/4wKpglgZYMYpISMdThgdqS1TSQc.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/4wKpglgZYMYpISMdThgdqS1TSQc.jpg",
       release_date: "2025-01-31",
       title: "Deva",
       video: false,
@@ -45,7 +47,8 @@ const data = {
       overview:
         "By day, they're invisible—valets, hostesses, and bartenders at a luxury hotel. By night, they're the Carjackers, a crew of skilled drivers who track and rob wealthy clients on the road. As they plan their ultimate heist, the hotel director hires a ruthless hitman, to stop them at all costs. With danger closing in, can Nora, Zoe, Steve, and Prestance pull off their biggest score yet?",
       popularity: 380.9912,
-      poster_path: "/wbkPMTz2vVai7Ujyp0ag7AM9SrO.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/wbkPMTz2vVai7Ujyp0ag7AM9SrO.jpg",
       release_date: "2025-03-27",
       title: "Carjackers",
       video: false,
@@ -62,7 +65,8 @@ const data = {
       overview:
         "When a group of radical activists take over an energy company's annual gala, seizing 300 hostages, an ex-soldier turned window cleaner suspended 50 storeys up on the outside of the building must save those trapped inside, including her younger brother.",
       popularity: 343.3057,
-      poster_path: "/mwzDApMZAGeYCEVjhegKvCzDX0W.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/mwzDApMZAGeYCEVjhegKvCzDX0W.jpg",
       release_date: "2025-02-21",
       title: "Cleaner",
       video: false,
@@ -79,7 +83,8 @@ const data = {
       overview:
         "After meeting with newly elected U.S. President Thaddeus Ross, Sam finds himself in the middle of an international incident. He must discover the reason behind a nefarious global plot before the true mastermind has the entire world seeing red.",
       popularity: 339.0809,
-      poster_path: "/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
       release_date: "2025-02-14",
       title: "Captain America: Brave New World",
       video: false,
@@ -96,7 +101,8 @@ const data = {
       overview:
         "A mercenary takes on the job of tracking down a target on a plane but must protect her when they're surrounded by people trying to kill both of them.",
       popularity: 298.5071,
-      poster_path: "/x4nWnfgJvL045rcUCSJzfgIIY9i.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/x4nWnfgJvL045rcUCSJzfgIIY9i.jpg",
       release_date: "2025-05-09",
       title: "Fight or Flight",
       video: false,
@@ -113,7 +119,8 @@ const data = {
       overview:
         "Levon Cade left behind a decorated military career in the black ops to live a simple life working construction. But when his boss's daughter, who is like family to him, is taken by human traffickers, his search to bring her home uncovers a world of corruption far greater than he ever could have imagined.",
       popularity: 293.7838,
-      poster_path: "/6FRFIogh3zFnVWn7Z6zcYnIbRcX.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/6FRFIogh3zFnVWn7Z6zcYnIbRcX.jpg",
       release_date: "2025-03-28",
       title: "A Working Man",
       video: false,
@@ -130,7 +137,8 @@ const data = {
       overview:
         "After his father's death, Eric Zimmerman travels to Spain to oversee his company's branches. In Madrid, he falls for Judith and engage in an intense, erotic relationship full of exploration. However, Eric fears his secret may end their affair.",
       popularity: 286.593,
-      poster_path: "/76qnVxU2rPdVvipBN3DPQH6fVYB.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/76qnVxU2rPdVvipBN3DPQH6fVYB.jpg",
       release_date: "2024-11-29",
       title: "Ask Me What You Want",
       video: false,
@@ -147,7 +155,8 @@ const data = {
       overview:
         "In 2008, a group of men from Denmark and across Europe pull off the biggest heist of all time on Danish soil. Kasper, a boxer with few chances left in life, is offered the opportunity to plan the robbery by its foreign initiators.",
       popularity: 267.1198,
-      poster_path: "/7NLY1jNwtZX1yVzwVoBeAhaBE8i.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/7NLY1jNwtZX1yVzwVoBeAhaBE8i.jpg",
       release_date: "2025-02-21",
       title: "The Quiet Ones",
       video: false,
@@ -164,7 +173,8 @@ const data = {
       overview:
         "War stories about family, ethics and honor include the true story of two U.S. Marines who in a span of six seconds, must stand their ground to stop a suicide truck bomb, a Navy Corpsman who attempts to hold on to his humanity, and a WW2 soldier who gets separated from his squad and is forced to re-evaluate his code.",
       popularity: 254.8803,
-      poster_path: "/oXeiQAfRK90pxxhP5iKPXQqAIN1.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/oXeiQAfRK90pxxhP5iKPXQqAIN1.jpg",
       release_date: "2025-03-20",
       title: "The Codes of War",
       video: false,
@@ -181,7 +191,8 @@ const data = {
       overview:
         "Unlikely hero Mickey Barnes finds himself in the extraordinary circumstance of working for an employer who demands the ultimate commitment to the job… to die, for a living.",
       popularity: 246.8131,
-      poster_path: "/edKpE9B5qN3e559OuMCLZdW1iBZ.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/edKpE9B5qN3e559OuMCLZdW1iBZ.jpg",
       release_date: "2025-03-07",
       title: "Mickey 17",
       video: false,
@@ -198,7 +209,8 @@ const data = {
       overview:
         "Battles in virtual reality, survival in a post-apocalyptic wasteland, a Soviet spaceship giving a distress signal - Fantastic stories created with advanced special effects and passion.",
       popularity: 245.4771,
-      poster_path: "/mClzWv7gBqgXfjZXp49Enyoex1v.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/mClzWv7gBqgXfjZXp49Enyoex1v.jpg",
       release_date: "2023-08-03",
       title: "Cosmic Chaos",
       video: false,
@@ -215,7 +227,8 @@ const data = {
       overview:
         "Wendy Darling strikes out in an attempt to rescue her brother Michael from the clutches of the evil Peter Pan who intends to send him to Neverland. Along the way she meets a twisted Tinkerbell, who is hooked on what she thinks is fairy dust.",
       popularity: 214.9261,
-      poster_path: "/mOR1Ks0EcXocwMV4EPv4letz0F5.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/mOR1Ks0EcXocwMV4EPv4letz0F5.jpg",
       release_date: "2025-01-13",
       title: "Peter Pan's Neverland Nightmare",
       video: false,
@@ -232,7 +245,8 @@ const data = {
       overview:
         "An Interpol agent hunting the head of a global crime syndicate tracks his target to Las Vegas, but when the criminal organization kills his wife and daughter, he goes above the law to get his revenge.",
       popularity: 204.9709,
-      poster_path: "/whkFbOZTamHeugEG95jvQehSzAH.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/whkFbOZTamHeugEG95jvQehSzAH.jpg",
       release_date: "2023-10-20",
       title: "The Hard Hit",
       video: false,
@@ -249,7 +263,8 @@ const data = {
       overview:
         "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
       popularity: 197.6746,
-      poster_path: "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
       release_date: "2024-11-27",
       title: "Moana 2",
       video: false,
@@ -266,7 +281,8 @@ const data = {
       overview:
         "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
       popularity: 188.9034,
-      poster_path: "/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
       release_date: "2024-12-20",
       title: "Mufasa: The Lion King",
       video: false,
@@ -283,7 +299,8 @@ const data = {
       overview:
         "As part of an internet challenge to live undetected in a stranger’s home, a daring couple target an infamous haunted house and endure a series of chilling incidents as they witness a family descending into madness.",
       popularity: 170.0659,
-      poster_path: "/kxxWBEn7qTN2xumSferCHbDudcT.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/kxxWBEn7qTN2xumSferCHbDudcT.jpg",
       release_date: "2024-10-18",
       title: "Ghost Game",
       video: false,
@@ -300,7 +317,8 @@ const data = {
       overview:
         "When intelligence agent Kathryn Woodhouse is suspected of betraying the nation, her husband – also a legendary agent – faces the ultimate test of whether to be loyal to his marriage, or his country.",
       popularity: 168.4294,
-      poster_path: "/hHPovtU4b96LHcoeEwRkGHI5btw.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/hHPovtU4b96LHcoeEwRkGHI5btw.jpg",
       release_date: "2025-03-14",
       title: "Black Bag",
       video: false,
@@ -317,7 +335,8 @@ const data = {
       overview:
         "A young nurse with a domestic abuse past starts working the night shift at a small hospital, where, during the night, the ghost of a nurse materializes.",
       popularity: 167.6628,
-      poster_path: "/iSSx9Bys64vlOkvkyKXtp19P7Re.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/iSSx9Bys64vlOkvkyKXtp19P7Re.jpg",
       release_date: "2024-10-31",
       title: "Turno nocturno",
       video: false,
@@ -334,7 +353,8 @@ const data = {
       overview:
         "The Batman family has returned to the present to discover that Japan has disappeared, and a giant island - Hinomoto - is now in the sky over Gotham City.  At the top sit the Yakuza, a group of superpowered individuals who reign without honor or humanity and look suspiciously like the Justice League. Now, it’s up to Batman and his allies to save Gotham!",
       popularity: 158.7616,
-      poster_path: "/sVVT6`GYFErVv0Lcc9NvqCu0iOxO.jpg",
+      poster_path:
+        "https://image.tmdb.org/t/p/w500/sVVT6`GYFErVv0Lcc9NvqCu0iOxO.jpg",
       release_date: "2025-03-18",
       title: "Batman Ninja vs. Yakuza League",
       video: false,

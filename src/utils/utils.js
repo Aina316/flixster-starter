@@ -7,7 +7,7 @@ const parseMovieData = (movie) => {
       id: x.id,
       image: x.poster_path,
       title: x.title,
-      rating: x.vote_average,
+      rating: x.vote_average.toFixed(2),
     });
   }
   return info;
