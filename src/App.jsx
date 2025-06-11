@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import MovieList from "./MovieList";
-import MovieModal from "./Modal";
+import MovieList from "./components/MovieList";
+import MovieModal from "./components/Modal";
 import { fetchMovies } from "./utils/App";
 import { fetchSearchMovies } from "./utils/App";
-import "./App.css";
+import "./style/App.css";
 
 function App() {
   const [sortOption, setSortOption] = useState("");

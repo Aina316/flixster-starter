@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { fetchMovieDetails } from "./utils/App";
-import { fetchVideoDetails } from "./utils/App";
-import "./Modal.css";
+import { fetchMovieDetails } from "../utils/App";
+import { fetchVideoDetails } from "../utils/App";
+import "../style/Modal.css";
 
 const Modal = ({ movieId, onClose }) => {
   const [movie, setMovie] = useState(null);
@@ -36,10 +36,14 @@ const Modal = ({ movieId, onClose }) => {
 
   if (!movieId || loading) return null;
   const getTrailer = (video) => {
+    console.log("1987", video);
     for (const data of video.results) {
-      if (data.name === "Official Trailer") {
+      if (
+        data.name === "Official Trailer" ||
+        data.name === "Official US Trailer"
+      ) {
         const result = data.key;
-        console.log(result);
+        console.log("1988", result);
         return result;
       }
     }
@@ -69,16 +73,16 @@ const Modal = ({ movieId, onClose }) => {
           <strong>Overview:</strong> {movie.overview}
         </p>
         <iframe
-          width="560"
-          height="315"
+          width="450"
+          height="255"
           src={`https://www.youtube.com/embed/${getTrailer(
             video
           )}?si=VNpPSVYwaMjZiu5i`}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </div>
     </div>

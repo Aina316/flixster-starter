@@ -1,6 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import "./MovieList.css";
+import "../style/MovieList.css";
 const MovieList = ({ movies, onCardClick }) => {
   if (!movies || movies.length === 0) {
     return <p>No movies available.</p>;

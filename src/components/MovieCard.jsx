@@ -1,7 +1,13 @@
-import React from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as faSolid } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faRegular } from "@fortawesome/free-regular-svg-icons";
+library.add(faSolid, faRegular);
 
-import "./MovieCard.css";
+import "../style/MovieCard.css";
+import "../style/FontAwesome.css";
 
 const MovieCard = ({ movie, onClick }) => {
   return (
@@ -16,6 +22,8 @@ const MovieCard = ({ movie, onClick }) => {
         <p className="movie-rating">
           Rating⭐ {movie.vote_average?.toFixed(1)}
         </p>
+        {/* <FontAwesomeIcon icon={faSolid} /> */}
+        <FontAwesomeIcon className="favorite" icon={faRegular} />
       </div>
     </div>
   );
