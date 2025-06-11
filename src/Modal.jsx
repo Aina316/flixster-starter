@@ -14,6 +14,15 @@ const Modal = ({ movieId, onClose }) => {
         const data = await fetchMovieDetails(movieId);
         setMovie(data);
         const data_video = await fetchVideoDetails(movieId);
+        // const getTrailer = (data_video) => {
+        //   for (const data in data_video) {
+        //     if (data.name === "Official Trailer") {
+        //       const result = data.key;
+        //       return result;
+        //     }
+        //     return null;
+        //   }
+        // };
         setVideo(data_video);
       } catch (err) {
         console.error(err);
@@ -26,7 +35,15 @@ const Modal = ({ movieId, onClose }) => {
   }, [movieId]);
 
   if (!movieId || loading) return null;
-  console.log(video);
+  const getTrailer = (video) => {
+    for (const data of video.results) {
+      if (data.name === "Official Trailer") {
+        const result = data.key;
+        console.log(result);
+        return result;
+      }
+    }
+  };
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -52,11 +69,17 @@ const Modal = ({ movieId, onClose }) => {
           <strong>Overview:</strong> {movie.overview}
         </p>
         <iframe
-          width={120}
-          height={80}
-          src={`https://www.youtube.com/embed/${video.results.key}`}
-          allowFullScreen
-        />
+          width="560"
+          height="315"
+          src={`https://www.youtube.com/embed/${getTrailer(
+            video
+          )}?si=VNpPSVYwaMjZiu5i`}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   );
