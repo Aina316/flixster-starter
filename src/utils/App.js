@@ -9,7 +9,7 @@ export const fetchMovies = async (page = 1) => {
   return await res.json(); // <- make sure you're returning this
 };
 
-export const searchMovies = async (query, page = 1) => {
+export const fetchSearchMovies = async (query, page = 1) => {
   const res = await fetch(
     `${BASE_URL}/search/movie?query=${encodeURIComponent(
       query
@@ -20,10 +20,20 @@ export const searchMovies = async (query, page = 1) => {
   return await res.json(); // <- same here
 };
 
-export const fetchGenre = async () => {
+export const fetchMovieDetails = async (movieId) => {
   const res = await fetch(
-    `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
+    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
   );
-  if (!res.ok) throw new Error("Failed to fetch now playing");
+  if (!res.ok) throw new Error("Failed to fetch movie details");
+  console.log("2024", res);
+  return await res.json();
+};
+
+export const fetchVideoDetails = async (movieId) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`
+  );
+  if (!res.ok) throw new Error("Failed to fetch movie details");
+  console.log("2025", res);
   return await res.json();
 };

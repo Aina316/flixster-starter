@@ -15,6 +15,67 @@
   margin: 30px;
   margin-bottom: 50px;
 }
+
+.sort-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.sort-dropdown {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.header-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.app-header {
+  background-color: black;
+  color: #008001;
+  font-size: xx-large;
+  padding: 5px 5px 5px 5px;
+}
+footer {
+  background-color: black;
+  color: #008001;
+  font-size: xx-large;
+  padding: 5px 5px 5px 5px;
+}
+.footer-title {
+  margin-bottom: 0;
+}
+/* .socials {
+  display: flex;
+  flex-direction: row;
+} */
+.icons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.icons li {
+  padding-right: 20px;
+}
+
+.icons li a {
+  text-decoration: none;
+}
+.icons li a:hover {
+  text-decoration: underline white;
+}
+.label {
+  color: #008001;
+}
+
+.copyright li {
+  list-style: none;
+}
 @media (max-width: 600px) {
   .movie-card {
     width: 100%;

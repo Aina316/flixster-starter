@@ -1,7 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 import "./MovieList.css";
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, onCardClick }) => {
   if (!movies || movies.length === 0) {
     return <p>No movies available.</p>;
   }
@@ -9,7 +9,7 @@ const MovieList = ({ movies }) => {
   return (
     <div id="movielist-component">
       {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
+        <MovieCard key={movie.id} movie={movie} onClick={onCardClick} />
       ))}
     </div>
   );
