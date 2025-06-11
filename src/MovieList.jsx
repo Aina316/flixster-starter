@@ -1,23 +1,18 @@
 import React from "react";
-import "./MovieList.css";
 import MovieCard from "./MovieCard";
-import { parseMovieData } from "./utils/utils";
-function MovieList(props) {
-  const preparedData = parseMovieData(props.data);
+import "./MovieList.css";
+const MovieList = ({ movies }) => {
+  if (!movies || movies.length === 0) {
+    return <p>No movies available.</p>;
+  }
+  console.log("222", movies);
   return (
-    <section id="movielist-component" className="movie-grid">
-      {preparedData.map((obj) => {
-        return (
-          <MovieCard
-            key={obj.id}
-            cover={obj.image}
-            title={obj.title}
-            rating={obj.rating}
-          />
-        );
-      })}
-    </section>
+    <div id="movielist-component">
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
+    </div>
   );
-}
+};
 
 export default MovieList;

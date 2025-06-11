@@ -8,6 +8,10 @@
   height: 360px;
   width: calc(100% / 7);
 }
+#moviecard-component:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 .movie-cover {
   width: 100%;
