@@ -30,10 +30,7 @@ const Modal = ({ movieId, onClose }) => {
   const getTrailer = (video) => {
     console.log("1987", video);
     for (const data of video.results) {
-      if (
-        data.name === "Official Trailer" ||
-        data.name === "Official US Trailer"
-      ) {
+      if (data.name.includes("Trailer")) {
         const result = data.key;
         console.log("1988", result);
         return result;
