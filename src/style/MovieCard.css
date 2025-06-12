@@ -37,3 +37,9 @@
 .favorite:hover {
   transform: scale(1.25);
 }
+
+@media (max-width: 600px) {
+  #moviecard-component {
+    width: 90%;
+  }
+}

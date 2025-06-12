@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faSolid } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +11,12 @@ import "../style/MovieCard.css";
 import "../style/FontAwesome.css";
 
 const MovieCard = ({ movie, onClick }) => {
+  const [fav, setFav] = useState(false);
+
+  const makeFavorite = (e) => {
+    e.stopPropagation();
+    setFav((prev) => !prev);
+  };
   return (
     <div id="moviecard-component" onClick={() => onClick(movie.id)}>
       <img
@@ -22,8 +29,12 @@ const MovieCard = ({ movie, onClick }) => {
         <p className="movie-rating">
           Rating⭐ {movie.vote_average?.toFixed(1)}
         </p>
-        {/* <FontAwesomeIcon icon={faSolid} /> */}
-        <FontAwesomeIcon className="favorite" icon={faRegular} />
+        <div className="heart" onClick={makeFavorite}>
+          <FontAwesomeIcon
+            className="favorite"
+            icon={fav ? faSolid : faRegular}
+          />
+        </div>
       </div>
     </div>
   );

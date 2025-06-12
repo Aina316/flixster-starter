@@ -14,15 +14,7 @@ const Modal = ({ movieId, onClose }) => {
         const data = await fetchMovieDetails(movieId);
         setMovie(data);
         const data_video = await fetchVideoDetails(movieId);
-        // const getTrailer = (data_video) => {
-        //   for (const data in data_video) {
-        //     if (data.name === "Official Trailer") {
-        //       const result = data.key;
-        //       return result;
-        //     }
-        //     return null;
-        //   }
-        // };
+
         setVideo(data_video);
       } catch (err) {
         console.error(err);
