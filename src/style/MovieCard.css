@@ -7,7 +7,7 @@
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 30px;
-  height: 360px;
+  height: 400px;
   width: calc(100% / 8);
 }
 #moviecard-component:hover {
@@ -29,7 +29,13 @@
   font-size: 1rem;
   margin: 0.5rem 0;
 }
-
+.icons {
+  display: flex;
+  flex-direction: column;
+}
+.heart {
+  margin-bottom: 20px;
+}
 .favorite {
   margin-bottom: 10px;
 }
@@ -38,6 +44,20 @@
   transform: scale(1.25);
 }
 
+.watched {
+  margin-bottom: 10px;
+}
+
+.watched:hover {
+  transform: scale(1.25);
+}
+
+.isFavorite {
+  color: red;
+}
+.isWatched {
+  color: gold;
+}
 @media (max-width: 600px) {
   #moviecard-component {
     width: 90%;
