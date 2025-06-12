@@ -37,11 +37,12 @@ const Modal = ({ movieId, onClose }) => {
       }
     }
   };
+  console.log("12/6/2025", movie);
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-btn" onClick={onClose}>
-          ✖
+          &times;
         </button>
         <h2>{movie.title}</h2>
         <img
@@ -61,18 +62,21 @@ const Modal = ({ movieId, onClose }) => {
         <p>
           <strong>Overview:</strong> {movie.overview}
         </p>
-        <iframe
-          width="450"
-          height="255"
-          src={`https://www.youtube.com/embed/${getTrailer(
-            video
-          )}?si=VNpPSVYwaMjZiu5i`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        {video.results ? (
+          <iframe
+            width="450"
+            height="255"
+            src={`https://www.youtube.com/embed/${getTrailer(
+              video
+            )}?si=VNpPSVYwaMjZiu5i`}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <p>No Trailer!</p>
+        )}
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import "../style/FontAwesome.css";
 const MovieCard = ({ movie, onClick }) => {
   const [fav, setFav] = useState(false);
   const [watched, setWatched] = useState(false);
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
 
   const makeFavorite = (e) => {
     e.stopPropagation();
@@ -25,7 +26,7 @@ const MovieCard = ({ movie, onClick }) => {
     e.stopPropagation();
     setWatched((prev) => !prev);
   };
-
+  console.log(movie);
   return (
     <div id="moviecard-component" onClick={() => onClick(movie.id)}>
       <img

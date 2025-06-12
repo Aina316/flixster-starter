@@ -16,7 +16,6 @@ export const fetchSearchMovies = async (query, page = 1) => {
     )}&api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false&include_video=false`
   );
   if (!res.ok) throw new Error("Failed to fetch search");
-  console.log("22222", res);
   return await res.json(); // <- same here
 };
 
@@ -25,7 +24,6 @@ export const fetchMovieDetails = async (movieId) => {
     `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
   );
   if (!res.ok) throw new Error("Failed to fetch movie details");
-  console.log("2024", res);
   return await res.json();
 };
 
@@ -34,6 +32,5 @@ export const fetchVideoDetails = async (movieId) => {
     `${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`
   );
   if (!res.ok) throw new Error("Failed to fetch movie details");
-  console.log("2025", res);
   return await res.json();
 };

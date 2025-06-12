@@ -4,7 +4,7 @@
 }
 
 .load-more-movies {
-  margin: 30px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -33,6 +33,10 @@
   font-size: xx-large;
   padding: 5px 5px 5px 5px;
 }
+#main-movie-cards {
+  margin-top: 5%;
+  margin-bottom: 18%;
+}
 footer {
   background-color: black;
   color: #008001;
@@ -48,6 +52,7 @@ footer {
 } */
 .icons {
   display: flex;
+  flex-direction: row;
   list-style: none;
   justify-content: center;
 }
@@ -68,6 +73,61 @@ footer {
 .copyright li {
   list-style: none;
 }
+#side-navigation-bar {
+  display: flex;
+  flex-direction: row;
+}
+.sidenav-open {
+  height: 100%; /* 100% Full-height */
+  width: 250px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav-close {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav-open a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav-open a:hover {
+  color: #008001;
+}
+
+.sidenav-open .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.open-nav-btn {
+  font-size: 40px;
+  text-align: center;
+  width: 50px;
+  height: 40px;
+  padding-bottom: 50px;
+}
 @media (max-width: 600px) {
   .movie-card {
     width: 100%;
@@ -76,9 +136,5 @@ footer {
   .search-bar {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .search-bar form {
-    flex-direction: column;
   }
 }

@@ -3,19 +3,54 @@ import MovieList from "./components/MovieList";
 import MovieModal from "./components/Modal";
 import { fetchMovies } from "./utils/App";
 import { fetchSearchMovies } from "./utils/App";
+import {
+  faInstagram,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add(faInstagram, faGithub, faLinkedin);
+
 import "./style/App.css";
 
 function App() {
+  const [nav, setNav] = useState(false);
   const [sortOption, setSortOption] = useState("");
   const [selectedMovieId, setSelectedMovieId] = useState(null);
   const [searchInput, setSearchInput] = useState("");
   const [query, setQuery] = useState("");
+  const [watchedMovies, setWatchedMovies] = useState([]);
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [pageType, setPageType] = useState("home");
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState("now_playing");
 
+  const toggleNav = (e) => {
+    setNav((prev) => !nav);
+  };
+  const onFavorites = (movie) => {
+    setFavoriteMovies((prev) =>
+      prev.some((x) => x.id !== movie.id)
+        ? prev.filter((x) => x.id !== movie.id)
+        : [...prev, movie]
+    );
+  };
+  const onWatched = (movie) => {
+    setFavoriteMovies((prev) =>
+      prev.some((x) => x.id !== movie.id)
+        ? prev.filter((x) => x.id !== movie.id)
+        : [...prev, movie]
+    );
+  };
+  const loadFavoriteMovies = (favorites) => {
+    if (favorites) {
+    }
+  };
+  //function to sort movies
   const sortMovies = (movieList) => {
     const sorted = [...movieList];
 
@@ -33,6 +68,7 @@ function App() {
     return sorted;
   };
 
+  //Function to load now playing movies and searched movies
   const loadMovies = async (isNewSearch = false) => {
     setLoading(true);
     try {
@@ -90,7 +126,7 @@ function App() {
     setPage(1);
     setMode("now_playing");
   };
-
+  const setFavorite = () => {};
   return (
     <div className="App">
       <header className="app-header">
@@ -149,10 +185,24 @@ function App() {
             <option value="vote_average">Rating (Highest)</option>
           </select>
         </div>
+        <nav id="side-navigation-bar">
+          <div className={nav ? "sidenav-close" : "sidenav-open"}>
+            <a href="#" className="closebtn" onClick={toggleNav}>
+              &times;
+            </a>
+            <a href="#">Home</a>
+            <a href="#">Favorite</a>
+            <a href="#">Watched</a>
+          </div>
+
+          <button className="open-nav-btn" onClick={toggleNav}>
+            ≣
+          </button>
+        </nav>
       </header>
 
       <main id="main-movie-cards">
-        <h2>
+        <h2 className="current-mode">
           {mode === "search"
             ? `Results for "${query ? query : "search"}"`
             : "Now Playing"}
@@ -161,6 +211,10 @@ function App() {
         <MovieList
           movies={sortMovies(movies)}
           onCardClick={setSelectedMovieId}
+          onFavorites={onFavorites}
+          onWatched={onWatched}
+          favs={favs}
+          watched={watched}
         />
 
         {selectedMovieId && (
@@ -184,33 +238,24 @@ function App() {
         <div className="socials">
           <ul className="icons">
             <li>
-              <a
-                href="https://www.instagram.com/yonko_darasimi?igsh=MWN3MDR1Mm93aW1xdA=="
-                className="icon brands alt fa-instagram"
-              >
-                <span className="label">Instagram</span>
+              <a href="https://github.com/Aina316">
+                <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/Aina316"
-                className="icon brands alt fa-github"
-              >
-                <span className="label">GitHub</span>
+              <a href="https://www.instagram.com/yonko_darasimi?igsh=MWN3MDR1Mm93aW1xdA==">
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/emmanuelaina4/"
-                className="icon brands alt fa-linkedin-in"
-              >
-                <span className="label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/emmanuelaina4/">
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
           </ul>
           <ul className="copyright">
             <li>
-              <b>Copyright &copy; 2024 | All Rights Reserved</b>
+              <b>Copyright &copy; 2025 | All Rights Reserved</b>
             </li>
           </ul>
         </div>
