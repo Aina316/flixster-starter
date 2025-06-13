@@ -67,9 +67,9 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 #### STRETCH FEATURES
 
 
-- [ ] **Embedded Movie Trailers**
-  - [ ] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
-    - [ ] When the trailer is clicked, users can play the movie trailer.
+- [x] **Embedded Movie Trailers**
+  - [x] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
+    - [x] When the trailer is clicked, users can play the movie trailer.
 - [ ] **Favorite Button**
   - [ ] For each movie displayed, users can favorite the movie.
   - [ ] There should be visual element (such as a heart icon) on each movie's tile to show whether or not the movie has been favorited.
