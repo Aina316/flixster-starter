@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #008001;
+  background-color: #008a00;
 }
 
 .load-more-movies {
@@ -109,7 +109,7 @@ footer {
 }
 
 .sidenav-open a:hover {
-  color: #008001;
+  color: #008a00;
 }
 
 .sidenav-open .closebtn {
@@ -119,12 +119,12 @@ footer {
   font-size: 36px;
   margin-left: 50px;
 }
-.open-nav-btn {
-  font-size: 40px;
-  text-align: center;
-  width: 50px;
-  height: 40px;
-  padding-bottom: 50px;
+.sidenav-btn {
+  display: flex;
+  flex-direction: row;
+  font-size: larg;
+  width: 3%;
+  justify-content: center;
 }
 @media (max-width: 600px) {
   .movie-card {

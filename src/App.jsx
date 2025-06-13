@@ -28,6 +28,11 @@ function App() {
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState("now_playing");
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSide = () => {
+    setIsOpen((prev) => !prev);
+  };
 
   const onFavorites = (movie) => {
     setFavoriteMovies((prev) => {
@@ -181,10 +186,21 @@ function App() {
             <option value="vote_average">Rating (Highest)</option>
           </select>
         </div>
+        <button className="sidenav-btn" onClick={toggleSide}>
+          ≣
+        </button>
       </header>
 
       <main id="main-movie-cards">
-        <SideBar pageType={pageType} setPageType={setPageType} />
+        {isOpen && (
+          <div>
+            <SideBar
+              pageType={pageType}
+              setPageType={setPageType}
+              toggleSide={toggleSide}
+            />
+          </div>
+        )}
         {pageType === "home" && (
           <div>
             <h2 className="current-mode">

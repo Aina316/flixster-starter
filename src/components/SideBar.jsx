@@ -1,8 +1,11 @@
 import "../style/SideBar.css";
 
-const SideBar = ({ pageType, setPageType }) => {
+const SideBar = ({ pageType, setPageType, toggleSide }) => {
   return (
     <nav className="sidebar">
+      <button className="sidenav-btn" onClick={toggleSide}>
+        ≣
+      </button>
       <button
         onClick={() => setPageType("home")}
         className={pageType === "home" ? "home" : ""}

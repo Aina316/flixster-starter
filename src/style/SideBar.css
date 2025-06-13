@@ -20,9 +20,17 @@
 .sidebar button {
   background: none;
   border: none;
-  color: #008001;
-  font-size: 1rem;
+  color: #008a00;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+
+.sidenav-btn {
+  display: flex;
+  flex-direction: row;
+  font-size: larger;
+  width: 3%;
+  justify-content: center;
 }
 
 .sidebar .active {
