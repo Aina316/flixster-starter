@@ -113,20 +113,26 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The react lesson was extremly helpful and I belived the useState lesson was fundamental in many aspects of my code. With absolutely no knowledge on it and barely any knowledge on react i was able to use it in my project. I felt i wouldn't e able to implement the sort function and also filter out movies that don't have any images but I managed to complete them with help from my cohort and the instructors.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time i would have made my css much better and added more effcts to my cards and side navigaton bar.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I believe most of the project went well but I didn't quite hit the mark on the styling department. I noticed my peers implemented smoother transitions and interfaces in their projects and I believe I will focus more on that compared to this week's project.
 
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
 
+Font Awesome - https://fontawesome.com/
+
+
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Shout out to all my fellow interns and the instructors for helping me out various times when I was stuck! Thank you so much!
+
