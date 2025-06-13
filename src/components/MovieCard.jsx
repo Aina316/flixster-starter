@@ -22,7 +22,6 @@ const MovieCard = ({
   const isFavorite = favs.some((x) => x.id === movie.id);
   const isWatched = watched.some((x) => x.id === movie.id);
 
-  console.log(movie);
   return (
     <div id="moviecard-component" onClick={() => onClick(movie.id)}>
       <img

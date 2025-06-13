@@ -11,7 +11,12 @@
   padding-top: 60px;
   gap: 20px;
 }
-
+.open {
+  width: 180px;
+}
+.closed {
+  width: 50px;
+}
 .sidebar button {
   background: none;
   border: none;

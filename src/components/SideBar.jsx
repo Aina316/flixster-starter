@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/SideBar.css";
 
 const SideBar = ({ pageType, setPageType }) => {

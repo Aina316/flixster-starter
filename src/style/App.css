@@ -46,10 +46,7 @@ footer {
 .footer-title {
   margin-bottom: 0;
 }
-/* .socials {
-  display: flex;
-  flex-direction: row;
-} */
+
 .icons {
   display: flex;
   flex-direction: row;
