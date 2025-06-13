@@ -1,34 +1,23 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
-
 ## Unit Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **Emmanuel Aina**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **28** hours spent in total
 
-Deployed Application (**required**): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Flixster Deployed Site](https://flixster-starter-nk2d.onrender.com)
 
 ### Application Features
 
 #### REQUIRED FEATURES
 
-- [ ] **Display Movies**
-  - [ ] Users can view a list of current movies from The Movie Database API in a grid view.
-    - [ ] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
-  - [ ] For each movie displayed, users can see the movie's:
-    - [ ] Title
-    - [ ] Poster image
-    - [ ] Vote average
-  - [ ] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page. 
+- [x] **Display Movies**
+  - [x] Users can view a list of current movies from The Movie Database API in a grid view.
+    - [x] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
+  - [x] For each movie displayed, users can see the movie's:
+    - [x] Title
+    - [x] Poster image
+    - [x] Vote average
+  - [x] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page. 
 - [ ] **Search Functionality**
   - [ ] Users can use a search bar to search for movies by title.
   - [ ] The search bar should include:
