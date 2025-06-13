@@ -79,15 +79,15 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
   - [x] If the movie is already favorited:
     - [x] Clicking on the visual element should mark the movie as *not* favorited.
     - [x] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
-- [ ] **Watched Checkbox**
-  - [ ] For each movie displayed, users can mark the movie as watched.
-  - [ ] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
-  - [ ] If the movie has not been watched:
-    - [ ] Clicking on the visual element should mark the movie as watched
-    - [ ] There should be visual feedback (such as the eye turning a different color) to show that the movie has been watched by the user.
-  - [ ] If the movie is already watched:
-    - [ ] Clicking on the visual element should mark the movie as *not* watched.
-    - [ ] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
+- [x] **Watched Checkbox**
+  - [x] For each movie displayed, users can mark the movie as watched.
+  - [x] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
+  - [x] If the movie has not been watched:
+    - [x] Clicking on the visual element should mark the movie as watched
+    - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has been watched by the user.
+  - [x] If the movie is already watched:
+    - [x] Clicking on the visual element should mark the movie as *not* watched.
+    - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
 - [ ] **Sidebar**
   - [ ] The website includes a side navigation bar.
   - [ ] The sidebar has three pages:
