@@ -173,22 +173,24 @@ function App() {
           </div>
         )}
         <div className="sort-box">
-          <label htmlFor="sort-select">Sort by:</label>
-          <select
-            id="sort-select"
-            value={sortOption}
-            onChange={(e) => setSortOption(e.target.value)}
-            className="sort-dropdown"
-          >
-            <option value="">Default</option>
-            <option value="title">Title (A–Z)</option>
-            <option value="release_date">Release Date (Newest)</option>
-            <option value="vote_average">Rating (Highest)</option>
-          </select>
+          <button className="sidenav-btn" onClick={toggleSide}>
+            ≣
+          </button>
+          <div>
+            <label htmlFor="sort-select">Sort by: </label>
+            <select
+              id="sort-select"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+              className="sort-dropdown"
+            >
+              <option value="">Default</option>
+              <option value="title">Title (A–Z)</option>
+              <option value="release_date">Release Date (Newest)</option>
+              <option value="vote_average">Rating (Highest)</option>
+            </select>
+          </div>
         </div>
-        <button className="sidenav-btn" onClick={toggleSide}>
-          ≣
-        </button>
       </header>
 
       <main id="main-movie-cards">
@@ -262,7 +264,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <h4 className="footer-title">Emmanuel Aina</h4>
+        <h4 className="footer-title">Emmanuel Aina & Co.</h4>
         <div className="socials">
           <ul className="icons">
             <li>
