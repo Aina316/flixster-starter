@@ -7,7 +7,23 @@
   margin-top: 100px;
   margin-bottom: 50px;
 }
-
+.box {
+  margin-top: 30px;
+}
+.box input {
+  font-size: 20px;
+  width: 200px;
+  height: 20px;
+  margin-right: 20px;
+}
+.box button {
+  width: 100px;
+  margin-right: 20px;
+}
+.toggle-buttons button {
+  width: 200px;
+  margin-right: 20px;
+}
 .sort-box {
   display: flex;
   justify-content: space-between;
