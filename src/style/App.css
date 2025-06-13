@@ -62,6 +62,7 @@ footer {
 
 .icons li a {
   text-decoration: none;
+  color: #008001;
 }
 .icons li a:hover {
   text-decoration: underline white;

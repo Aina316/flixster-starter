@@ -32,32 +32,38 @@
 .icons {
   display: flex;
 }
-.heart {
-  margin-bottom: 20px;
-  padding-right: 20px;
-}
-.favorite {
-  margin-bottom: 10px;
-}
 
-.favorite:hover {
+.isFavorite {
+  margin-right: 10px;
+}
+.notFavorite {
+  margin-right: 10px;
+}
+.isFavorite:hover {
   transform: scale(1.25);
 }
-
-.watched {
-  margin-bottom: 10px;
-}
-
-.watched:hover {
+.notFavorite:hover {
   transform: scale(1.25);
 }
-
+.isWatched {
+  margin-left: 10px;
+}
+.notWatched {
+  margin-left: 10px;
+}
+.isWatched:hover {
+  transform: scale(1.25);
+}
+.notWatched:hover {
+  transform: scale(1.25);
+}
 .isFavorite {
   color: red;
 }
 .isWatched {
   color: gold;
 }
+
 @media (max-width: 600px) {
   #moviecard-component {
     width: 90%;

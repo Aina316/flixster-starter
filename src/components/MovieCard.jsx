@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faSolid } from "@fortawesome/free-solid-svg-icons";
@@ -12,20 +11,17 @@ library.add(faSolid, faRegular);
 import "../style/MovieCard.css";
 import "../style/FontAwesome.css";
 
-const MovieCard = ({ movie, onClick }) => {
-  const [fav, setFav] = useState(false);
-  const [watched, setWatched] = useState(false);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+const MovieCard = ({
+  movie,
+  onClick,
+  onFavorites,
+  onWatched,
+  favs,
+  watched,
+}) => {
+  const isFavorite = favs.some((x) => x.id === movie.id);
+  const isWatched = watched.some((x) => x.id === movie.id);
 
-  const makeFavorite = (e) => {
-    e.stopPropagation();
-    setFav((prev) => !prev);
-  };
-
-  const makeWatched = (e) => {
-    e.stopPropagation();
-    setWatched((prev) => !prev);
-  };
   console.log(movie);
   return (
     <div id="moviecard-component" onClick={() => onClick(movie.id)}>
@@ -40,18 +36,23 @@ const MovieCard = ({ movie, onClick }) => {
           Rating⭐ {movie.vote_average?.toFixed(1)}
         </p>
         <div className="icons">
-          <div className="heart" onClick={makeFavorite}>
-            <FontAwesomeIcon
-              className={fav ? "isFavorite" : "notFavorite"}
-              icon={fav ? faSolid : faRegular}
-            />
-          </div>
-          <div className="eye" onClick={makeWatched}>
-            <FontAwesomeIcon
-              className={watched ? "isWatched" : "notWatched"}
-              icon={watched ? solidEye : regularEye}
-            />
-          </div>
+          <FontAwesomeIcon
+            className={isFavorite ? "isFavorite" : "notFavorite"}
+            icon={isFavorite ? faSolid : faRegular}
+            onClick={(e) => {
+              e.stopPropagation();
+              onFavorites(movie);
+            }}
+          />
+
+          <FontAwesomeIcon
+            className={isWatched ? "isWatched" : "notWatched"}
+            icon={isWatched ? solidEye : regularEye}
+            onClick={(e) => {
+              e.stopPropagation();
+              onWatched(movie);
+            }}
+          />
         </div>
       </div>
     </div>

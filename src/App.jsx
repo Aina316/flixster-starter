@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import MovieModal from "./components/Modal";
+import SideBar from "./components/SideBar";
 import { fetchMovies } from "./utils/App";
 import { fetchSearchMovies } from "./utils/App";
 import {
@@ -15,7 +16,6 @@ library.add(faInstagram, faGithub, faLinkedin);
 import "./style/App.css";
 
 function App() {
-  const [nav, setNav] = useState(false);
   const [sortOption, setSortOption] = useState("");
   const [selectedMovieId, setSelectedMovieId] = useState(null);
   const [searchInput, setSearchInput] = useState("");
@@ -29,27 +29,23 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [mode, setMode] = useState("now_playing");
 
-  const toggleNav = (e) => {
-    setNav((prev) => !nav);
-  };
   const onFavorites = (movie) => {
-    setFavoriteMovies((prev) =>
-      prev.some((x) => x.id !== movie.id)
+    setFavoriteMovies((prev) => {
+      const favoriteMovieExists = prev.find((x) => x.id === movie.id);
+      return favoriteMovieExists
         ? prev.filter((x) => x.id !== movie.id)
-        : [...prev, movie]
-    );
+        : [...prev, movie];
+    });
   };
   const onWatched = (movie) => {
-    setFavoriteMovies((prev) =>
-      prev.some((x) => x.id !== movie.id)
+    setWatchedMovies((prev) => {
+      const watchedMovieexists = prev.find((x) => x.id === movie.id);
+      return watchedMovieexists
         ? prev.filter((x) => x.id !== movie.id)
-        : [...prev, movie]
-    );
+        : [...prev, movie];
+    });
   };
-  const loadFavoriteMovies = (favorites) => {
-    if (favorites) {
-    }
-  };
+
   //function to sort movies
   const sortMovies = (movieList) => {
     const sorted = [...movieList];
@@ -126,7 +122,7 @@ function App() {
     setPage(1);
     setMode("now_playing");
   };
-  const setFavorite = () => {};
+
   return (
     <div className="App">
       <header className="app-header">
@@ -185,38 +181,54 @@ function App() {
             <option value="vote_average">Rating (Highest)</option>
           </select>
         </div>
-        <nav id="side-navigation-bar">
-          <div className={nav ? "sidenav-close" : "sidenav-open"}>
-            <a href="#" className="closebtn" onClick={toggleNav}>
-              &times;
-            </a>
-            <a href="#">Home</a>
-            <a href="#">Favorite</a>
-            <a href="#">Watched</a>
-          </div>
-
-          <button className="open-nav-btn" onClick={toggleNav}>
-            ≣
-          </button>
-        </nav>
       </header>
 
       <main id="main-movie-cards">
-        <h2 className="current-mode">
-          {mode === "search"
-            ? `Results for "${query ? query : "search"}"`
-            : "Now Playing"}
-        </h2>
+        <SideBar pageType={pageType} setPageType={setPageType} />
+        {pageType === "home" && (
+          <div>
+            <h2 className="current-mode">
+              {mode === "search"
+                ? `Results for "${query ? query : "search"}"`
+                : "Now Showing"}
+            </h2>
 
-        <MovieList
-          movies={sortMovies(movies)}
-          onCardClick={setSelectedMovieId}
-          onFavorites={onFavorites}
-          onWatched={onWatched}
-          favs={favs}
-          watched={watched}
-        />
-
+            <MovieList
+              movies={sortMovies(movies)}
+              onCardClick={setSelectedMovieId}
+              onFavorites={onFavorites}
+              onWatched={onWatched}
+              favs={favoriteMovies}
+              watched={watchedMovies}
+            />
+          </div>
+        )}
+        {pageType === "favorites" && (
+          <div>
+            <h2>Favorites</h2>
+            <MovieList
+              movies={sortMovies(favoriteMovies)}
+              onCardClick={setSelectedMovieId}
+              onFavorites={onFavorites}
+              onWatched={onWatched}
+              favs={favoriteMovies}
+              watched={watchedMovies}
+            />
+          </div>
+        )}
+        {pageType === "watched" && (
+          <div>
+            <h2>Watched Movies</h2>
+            <MovieList
+              movies={sortMovies(watchedMovies)}
+              onCardClick={setSelectedMovieId}
+              onFavorites={onFavorites}
+              onWatched={onWatched}
+              favs={favoriteMovies}
+              watched={watchedMovies}
+            />
+          </div>
+        )}
         {selectedMovieId && (
           <MovieModal
             movieId={selectedMovieId}
